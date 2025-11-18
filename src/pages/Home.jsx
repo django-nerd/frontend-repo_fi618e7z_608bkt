@@ -1,5 +1,8 @@
 import HeroVideo from '../components/HeroVideo'
 import StatCard from '../components/StatCard'
+import VideoEmbed from '../components/VideoEmbed'
+
+const HOME_VIDEO_URL = import.meta.env.VITE_HOME_VIDEO_URL || ''
 
 export default function Home() {
   return (
@@ -18,9 +21,8 @@ export default function Home() {
           <StatCard title="Conditions" value="Remains difficult and hazardous." />
         </div>
 
-        <div className="mt-8 rounded-xl border border-slate-800 bg-slate-900/50 p-6">
-          <div className="text-sm text-slate-300">Hero Video Placeholder</div>
-          <div className="mt-2 text-xs text-slate-400">Embed a general camp overview loop here.</div>
+        <div className="mt-8">
+          <VideoEmbed url={HOME_VIDEO_URL} title="Iraq Map (Dashboard)" />
         </div>
       </main>
     </div>
